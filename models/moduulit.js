@@ -2,10 +2,10 @@ const Mysql = require("mysql");
 
 
 const yhteys = Mysql.createConnection({
-                                        "host":"localhost",
-                                        "user":"root", 
+                                        "host":"",
+                                        "user":"", 
                                         "password":"",
-                                        "database":"keskustelupalsta"
+                                        "database":""
                                     });
 
 
@@ -75,7 +75,7 @@ module.exports = {
 
                 },
 
-                lisaaKommentti:(tiedot,callback)=>{
+                lisaaKommentti:(tiedot,callback)=>{ 
 
                     let sql = "INSERT INTO viestit (id,sisalto,kirjoittaja) VALUES ?";
 
